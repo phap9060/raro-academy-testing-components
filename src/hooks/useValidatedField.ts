@@ -1,7 +1,6 @@
 import { ChangeEvent, FocusEvent, useCallback, useMemo, useState } from "react";
 
 export type ValidationFn = (value: string) => string[];
-
 export const useValidatedField = (validationFn: ValidationFn) => {
   const [value, setValue] = useState('');
   const [errors, setErrors] = useState<string[]>([]);
@@ -25,6 +24,5 @@ export const useValidatedField = (validationFn: ValidationFn) => {
     onBlur,
     errors,
     isValid,
-    setValue,
   };
 };

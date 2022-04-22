@@ -4,12 +4,14 @@ import { classNames } from "../../helpers/classnames";
 export interface InputProps extends
 React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   label: string;
+  isValid?: boolean;
   errors?: string[]
 }
 
 export const Input: React.FC<InputProps> = ({
   label,
   errors = [],
+  isValid,
   ...inputProps
 }) => {
   const labelError = errors.length > 0 ? 'text-red-700' : '';
