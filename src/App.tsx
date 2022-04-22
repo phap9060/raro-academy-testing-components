@@ -1,7 +1,7 @@
-import { BuscaCep } from "./pages/BuscaCep";
+import { Cadastro } from "./pages/Cadastro";
 
 export default function App() {
   return (
-    <BuscaCep />
+    <Cadastro />
   );
 }
